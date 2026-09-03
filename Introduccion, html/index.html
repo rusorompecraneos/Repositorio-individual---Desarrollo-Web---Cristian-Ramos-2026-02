@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Sirve como atributo para tomar las tildes, etc -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer sitio web</title>
+</head>
+
+<body>
+    <h1>Bienvenido a mi sitio web</h1>
+    <p>Este es mi primer párrafo.</p>
+    <strong>Este es un texto en negrita.</strong>
+    <em>Este es un texto en cursiva.</em>
+    <sub>Este es un texto en subíndice.</sub>
+    <p> Amo <u>tanto</u> a mi <strong>novia</strong> </p>
+
+
+
+    <img src="./imagenes/image.png" alt="Imagen 1">
+
+    <img src="./imagenes/gettyimages-1068015512-612x612.jpg" alt="Imagen 2">
+
+
+
+</body>
+<div id="imagenes">
+    <!-- Aqui creamos el bucle para poder repetir una imagen N veces.  -->
+
+    <script>
+        for (let i = 0; i <= 3; i++) {
+            document.getElementById("imagenes").innerHTML += `<img src="./imagenes/image.png" alt="Imagen ${i}">`;
+        }
+    </script>
+</div>
+
+</html>
+
+
+
+<!-- Hecho por Cristian Ramos -->
+
+
+
+
+<!-- LISTAS -->
+<ol>
+    <li> React</li>
+    <li>View </li>
+    <li>Django </li>
+</ol>
+<ul>
+    <li>React</li>
+    <li>View</li>
+    <li>Django</li>
+</ul>
+
+<!-- ENLACES -->
+
+<a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank">Visitar Youtube</a>
+
+<!-- TABLAS -->
+
+<!-- Combinar hacia los lados-->
+
+<table border=1 cellpadding=10 cellspacing=0>
+    <caption><strong>Agenda Semanal
+        </strong></caption>
+    <tr>
+        <th> Hora </th>
+        <th> Lunes </th>
+        <th> Martes </th>
+    </tr>
+    <tr>
+        <th>7:00 am</th>
+        <td colspan="2">Desayuno </td>
+    </tr>
+    <tr>
+        <th>8:00 am</th>
+        <td>Reunión</td>
+        <td>Clase</td>
+    </tr>
+</table>
+
+<!-- Combinar hacia abajo, junto con los colores de algunas columnas-->
+<table border=3 cellpadding=10 cellspacing=0> 
+    <caption><strong>Agenda Semanal</strong></caption>
+    <tr>
+        <th> Hora </th>
+        <th> Lunes </th>
+        <th> Martes </th>
+    </tr>
+    <tr>
+        <th>7:00 am</th>
+        <td rowspan="2">Reunión Jefe </td>
+        <td style="background-color: #9153e2;">Desayuno</td>
+    </tr>
+    <tr>
+        <th>8:00 am</th>
+        <td style="background-color: #2ee656;">Informe</td>
+    </tr>
+</table>
+
+
+<!-- SUB INDICE-->
+ <sub>Este es un texto en subíndice.</sub>
