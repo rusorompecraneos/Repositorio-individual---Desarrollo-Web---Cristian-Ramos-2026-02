@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> <!-- Sirve como atributo para tomar las tildes, etc -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact form</title>
+        <h1>Contact form</h1>
+        <h7>Please fill in your information and we'll be sending your order in no time!</h7>
+
+    </head>
+
+    <body>
+        <style>
+            body {
+                background-image: url(../imagenes/imagen_fondo.jpeg);
+                background-size: cover;
+            }
+        </style>
+        <form action="formulario.php" method="POST">
+
+            <label for="name"> Your name:</label>
+            
+            <input type="text" id="name" name="name" required placeholder="First name"> 
+            
+
+            <label for="lastname">:</label>
+            <input type="text" id="lastname" name="lastname" required placeholder="Last name"><br><br>
+
+            <label for="email">Your email:</label>
+            <input type="email" id="email" name="email" required placeholder="Email address"><br><br>
+
+            <label for="message">Phone:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="###">
+            <input type="tel" id="phone" name="phone" required placeholder="###">
+            <input type="tel" id="phone" name="phone" required placeholder="###"><br><br>
+
+            <label for = "subject">Message subject:</label>
+            <select id="subject" name="subject" required>
+                <option value="">Other</option>
+                <option value="order">Order</option>
+                <option value="complaint">Complaint</option>
+                <option value="suggestion">Suggestion</option>
+
+        
+            
+
+            <label for ="captcha">Verification:</label>
+            <input type ="checkbox" id="captcha" name="captcha" required> I am not a robot<br><br>
+
+           <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>message<br>     
+
+            <input type="submit" value="Submit form">
+        </form>
+    </body>
+</html>

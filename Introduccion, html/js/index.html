@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- Sirve como atributo para tomar las tildes, etc -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primer sitio web</title>
+</head>
+
+<body>
+    <h1>Bienvenido a mi sitio web</h1>
+    <p>Este es mi primer párrafo.</p>
+    <strong>Este es un texto en negrita.</strong>
+    <em>Este es un texto en cursiva.</em>
+    <sub>Este es un texto en subíndice.</sub>
+    <p> Amo <u>tanto</u> a mi <strong>novia</strong> </p>
+
+
+
+    <img src="./imagenes/image.png" alt="Imagen 1">
+
+    <img src="./imagenes/gettyimages-1068015512-612x612.jpg" alt="Imagen 2">
+
+
+
+</body>
+<div id="imagenes">
+    <!-- Aqui creamos el bucle para poder repetir una imagen N veces.  -->
+
+    <script>
+        for (let i = 0; i <= 3; i++) {
+            document.getElementById("imagenes").innerHTML += `<img src="./imagenes/image.png" alt="Imagen ${i}">`;
+        }
+    </script>
+</div>
+
+</html>
+
+
+
+<!-- Hecho por Cristian Ramos -->
+
+
+
+
+<!-- LISTAS -->
+<ol>
+    <li> React</li>
+    <li>View </li>
+    <li>Django </li>
+</ol>
+<ul>
+    <li>React</li>
+    <li>View</li>
+    <li>Django</li>
+</ul>
+
+<!-- ENLACES -->
+
+<a href="https://www.youtube.com/?app=desktop&hl=es" target="_blank">Visitar Youtube</a>
+
+<!-- TABLAS -->
+
+<!-- Combinar hacia los lados-->
+
+<table border=1 cellpadding=10 cellspacing=0>
+    <caption><strong>Agenda Semanal
+        </strong></caption>
+    <tr>
+        <th> Hora </th>
+        <th> Lunes </th>
+        <th> Martes </th>
+    </tr>
+    <tr>
+        <th>7:00 am</th>
+        <td colspan="2">Desayuno </td>
+    </tr>
+    <tr>
+        <th>8:00 am</th>
+        <td>Reunión</td>
+        <td>Clase</td>
+    </tr>
+</table>
+
+<!-- Combinar hacia abajo, junto con los colores de algunas columnas-->
+<table border=3 cellpadding=10 cellspacing=0> 
+    <caption><strong>Agenda Semanal</strong></caption>
+    <tr>
+        <th> Hora </th>
+        <th> Lunes </th>
+        <th> Martes </th>
+    </tr>
+    <tr>
+        <th>7:00 am</th>
+        <td rowspan="2">Reunión Jefe </td>
+        <td style="background-color: #9153e2;">Desayuno</td>
+    </tr>
+    <tr>
+        <th>8:00 am</th>
+        <td style="background-color: #2ee656;">Informe</td>
+    </tr>
+</table>
+
+
+<!-- SUB INDICE-->
+ <sub>Este es un texto en subíndice.</sub>
+
+
+ <!-- Formularios   -->
+
+  <!-- Princpial   -->
+    <form name="formulario" action="formulario.php" method="post" autocomplete="on" target="_blank">
+        <!-- Controladores "label"-->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su usuario"><br><br>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required size ="10" placeholder="Ingrese su contraseña"><br><br>
+
+        <label for ="genero"> Genero: </label>
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="masculino" name="genero" value="masculino" required checked="masculino"><br>
+        <label for="femenino">Femenino</label>
+        <input type="radio" id="femenino" name="genero" value="femenino" required><br><br>
+        <label for="otro">Otro</label>
+        <input type="radio" id="otro" name="genero" value="otro" required><br><br>
+
+
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- INPUTS TIPO CHECKBOX-->
+        <label for="deportes">Deportes:</label><br>
+        <input type="checkbox" id="futbol" name="deportes" value="futbol" checked>
+        <label for="futbol">Fútbol</label><br>
+        <input type="checkbox" id="basketball" name="deportes" value="basketball">
+        <label for="basketball">Baloncesto</label><br>
+        <input type="checkbox" id="tennis" name="deportes" value="tennis">
+        <label for="tennis">Tenis</label><br><br>
+
+        <!-- lISTAS DESPLEGADAS   -->
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" required>
+            <option value="">Seleccione un país</option>
+            <option value="0">Colombia </option>
+            <option value="1">México</option>
+            <option value="2" selected>Argentina</option>
+            <option value="3">Chile</option>
+        </select><br><br>
+        <!-- Grupos en las listas-->
+        <br><br>
+        <label for ="ciudad"> Ciudad: </label>
+        <select id="ciudad" name="ciudad" required>
+            <optgroup label="Seleccione una ciudad">
+                <option value="0">Bogotá</option>
+                <option value="1">Medellín</option>
+                <option value="2">Cali</option>
+                <option value="3">Barranquilla</option>
+            <optgroup label="Seleccione una ciudad">
+                <option value="4">Ciudad de México</option>
+                <option value="5">Guadalajara</option>
+                <option value="6">Monterrey</option>
+            </optgroup>
+
+
+        </select><br><br>
+
+        <!-- Campo oculto -->
+        <input type="hidden" value="1234567890" name="oculto">
+
+        <!-- Tipo archivos -->
+        <label for="archivo">Archivo:</label>
+        <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx"><br><br>
+
+        <!-- Textarea -->
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
+
+        <input type ="reset" value="Restablecer">
+
+        <label for="buscar">Buscar:</label>
+        <input type =search" name="buscar" placeholder="Buscar...">
+
+        <label for="fecha">Fecha:</label>
+        <input type ="date" name="fecha">
+
+        <label for="color">Color:</label>
+        <input type="color" id="color" name="color" value="#000000">
+
+        <input type ="range" id="rango" name="rango" min="0" max="100" value="50">
+
+        
+
+        <input type="submit" value="Enviar">
