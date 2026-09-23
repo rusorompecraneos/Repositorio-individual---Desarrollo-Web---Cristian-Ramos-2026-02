@@ -165,8 +165,7 @@
              · NO son obligatorias
              · envuelve el grupo en <div class="inline"> ... </div>
            --------------------------------------------------------- -->
-      <div class="todo">TODO 6 · checkboxes múltiples</div>
-
+      
 
       <!-- TODO 7 --------------------------------------------------
            Campo numérico "Horas semanales disponibles":
@@ -174,8 +173,8 @@
              · mínimo 5, máximo 40, incrementos de 5
              · valor inicial 10, obligatorio
            --------------------------------------------------------- -->
-      <div class="todo">TODO 7 · type number con min/max/step</div>
-    </fieldset>
+      <label for="horas">Horas semanales disponibles *</label>
+        <input type="number" id="horas" name="horas" min="5" max="40" step="5" value="10" required>
 
 
     <!-- ========================================================
@@ -192,7 +191,8 @@
            verdad, el <form> necesita además el atributo
            enctype="multipart/form-data"  -> agrégalo en el TODO 0.
            --------------------------------------------------------- -->
-      <div class="todo">TODO 8 · type file con accept</div>
+      <label for="hojavida">Hoja de vida (PDF) *</label>
+        <input type="file" id="hojavida" name="hojavida" accept=".pdf">
 
 
       <!-- TODO 9 --------------------------------------------------
@@ -203,7 +203,9 @@
              · obligatorio
              · placeholder libre
            --------------------------------------------------------- -->
-      <div class="todo">TODO 9 · textarea</div>
+      <label for="motivacion">¿Por qué quieres participar? *</label>
+        <textarea id="motivacion" name="motivacion" rows="4" maxlength="300" required placeholder="Escribe aquí tu motivación..."
+        ></textarea>
 
 
       <!-- TODO 10 -------------------------------------------------
@@ -212,8 +214,8 @@
              · OBLIGATORIO
              · label: "Acepto el tratamiento de mis datos personales *"
            --------------------------------------------------------- -->
-      <div class="todo">TODO 10 · checkbox obligatorio de términos</div>
-    </fieldset>
+      <input type="checkbox" id="terminos" name="terminos" required>
+        <label for="terminos">Acepto el tratamiento de mis datos personales *</label>
 
 
     <!-- TODO 11 -----------------------------------------------------
@@ -222,10 +224,11 @@
            · un botón que LIMPIA el formulario, texto "Borrar"
          (usa la etiqueta <button> con el type correcto en cada caso)
          ------------------------------------------------------------- -->
-    <div class="todo">TODO 11 · botones submit y reset</div>
+      <button type="submit">Enviar inscripción</button>
+      <button type="reset">Borrar</button>
 
   <!-- TODO 0 (cierre) — falta la etiqueta de cierre del formulario -->
-
+</form>
 
 
 </form><style>#myIframe { position:absolute; top: 0px; left: 0px; } @media print {  #myIframe { min-width: 100% ;   max-width: 100%;  width: 100%;  border: none; } body {width: 21cm; height: 100%; max-width: 21cm; }  html {height: 100%; width: 21cm; max-width: 21cm;}  @page { margin: 0.4;} }</style></body></html>
