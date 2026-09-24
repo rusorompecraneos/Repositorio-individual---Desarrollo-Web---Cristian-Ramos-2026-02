@@ -1,0 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color: #e76464;
+}
+h1{
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+}
