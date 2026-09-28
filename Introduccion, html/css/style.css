@@ -1,14 +1,33 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+.esopo {
+  width: 800px;
+  background-color: #15A085;
+  color: #FFFFFF;
+  margin: 50px auto;
+  border: 4px dashed #FCFC34;
+  padding: 30px 30px 30px 30px;
 }
-body{
-    background-color: #e76464;
+
+.esopo h1 {
+  color: #FFFFFF;
 }
-h1{
-    color: #fff;
-    text-align: center;
-    font-size: 3rem;
-    margin-top: 2rem;
+
+.esopo img {
+  width: 120px;
+  float: left;
+  margin-right: 10px;
 }
+
+.esopo p {
+  text-align: justify;
+}
+
+.homero {
+  font-family: Arial;
+  font-style: italic;
+  text-decoration: underline;
+  color: #FCFC34;
+}
+
+
+
+
